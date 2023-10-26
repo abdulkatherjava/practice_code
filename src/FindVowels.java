@@ -1,4 +1,7 @@
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class FindVowels {
     public static void main(String[] args) {
@@ -28,4 +31,5 @@ public class FindVowels {
                 .filter(ch -> "aeiouAEIOU".indexOf(ch) >= 0)
                 .count();
     }
+
 }
