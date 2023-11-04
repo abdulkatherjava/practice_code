@@ -13,25 +13,24 @@ public class science_technologies_31_10_23 {
         list.add(new Employee(4, "abdul4","teacher",50009L));
         list.add(new Employee(5, "abdul5","programmer",5000L));
         list.add(new Employee(6, "abdul6","legal",50L));
+
         List<Employee> grtThan5000 = list.stream()
-                .filter(emp ->emp.getSalary() >5000)
+                .filter(emp -> emp.getSalary() >5000)
                 .collect(Collectors.toList());
-
-
-
         List<String> grtThan5000Names = list.stream()
                 .filter(emp -> emp.getSalary() >5000)
                 .map(Employee::getName)
                 .collect(Collectors.toList());
         System.out.println(grtThan5000Names);
 
-        String minSalEmp = list.stream()
-                .min(Comparator.comparingDouble(emp -> emp.getSalary()))
+        String maxSalEmp = list.stream()
+                .max(Comparator.comparingDouble(Employee::getSalary))
                 .map(Employee::getName).get();
 
-        System.out.println(minSalEmp);
+        System.out.println(maxSalEmp);
 
         Map<String, List<Employee>> collect = list.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+        System.out.println(collect);
     }
 
 }

@@ -15,6 +15,5 @@ public class FindFirstRepeatedCharacter {
                 .filter(map -> map.getValue() > 1)
                 .findFirst().get().getKey();
         System.out.println("First Repeated Character:"+ key);
-
-    }
+           }
 }
