@@ -3,7 +3,7 @@ package wayfair;
 /**
  * Addition of large number in String
  */
-public class Wayfair_07_11_23 {
+public class AddHugeNumbersInString {
     public static void main(String[] args) {
         try {
             String str1 = "222232244629420445529739893461909967206666939096499764990979600";
