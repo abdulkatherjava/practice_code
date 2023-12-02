@@ -16,8 +16,8 @@ public class AddHugeNumbersInString {
 
             while (j >= 0 || k >= 0 || carryValue > 0) {
                 //for (int a = j-1, b = k-1; a>= 0 || b >= 0 || carryValue > 0; a--, b--) {
-                int temp1 = j >= 0 ? Integer.valueOf(String.valueOf(str1.charAt(j))) : 0;
-                int temp2 = k >= 0 ? Integer.valueOf(String.valueOf(str2.charAt(k))) : 0;
+                int temp1 = j >= 0 ? Integer.parseInt(String.valueOf(str1.charAt(j))) : 0;
+                int temp2 = k >= 0 ? Integer.parseInt(String.valueOf(str2.charAt(k))) : 0;
                 int val = temp1 + temp2 + carryValue;
                 if (val > 9) {
                     buffer.append(val % 10);
@@ -29,7 +29,9 @@ public class AddHugeNumbersInString {
                 j--;
                 k--;
             }
-            System.out.println(buffer.reverse());
+//          System.out.println(buffer.reverse());
+
+
         } catch (NumberFormatException e) {
             System.out.println("Wrong Input");
         } catch (Exception e) {
