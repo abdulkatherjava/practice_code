@@ -6,8 +6,8 @@ package wayfair;
 public class AddHugeNumbersInString {
     public static void main(String[] args) {
         try {
-            String str1 = "222232244629420445529739893461909967206666939096499764990979600";
-            String str2 = "1";
+            String str1 = "24";
+            String str2 = "19";
 
             StringBuffer buffer = new StringBuffer();
             int carryValue = 0;
@@ -28,9 +28,9 @@ public class AddHugeNumbersInString {
                 }
                 j--;
                 k--;
-            }
-//          System.out.println(buffer.reverse());
 
+            }
+          System.out.println(buffer.reverse());
 
         } catch (NumberFormatException e) {
             System.out.println("Wrong Input");

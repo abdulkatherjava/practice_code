@@ -46,12 +46,14 @@ public class FirstSource_16_10_23 {
     }
 
     public static int counting(String s){
+        System.out.println("s:"+s);
         long count = s.chars()
                 .mapToObj(ch -> (char) ch)
                 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
                 .entrySet().stream()
                 .filter(c -> c.getValue() == 1)
                 .mapToInt(entry -> entry.getKey()).count();
+        System.out.println(count);
     return (int)count;
 
     }

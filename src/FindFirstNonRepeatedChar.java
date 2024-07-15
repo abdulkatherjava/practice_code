@@ -20,8 +20,7 @@ public class FindFirstNonRepeatedChar {
                 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
                 .entrySet().stream()
                 .filter(val -> val.getValue() == 1)
-                .map(entry -> entry.getKey())
-                .findFirst().get();
+                .findFirst().get().getKey();
        return character;
     }
 }

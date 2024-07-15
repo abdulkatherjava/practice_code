@@ -8,10 +8,7 @@ public class findChar {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the String");
-        String str = "abdul kather";//scanner.nextLine();
-        int a = 011;
-        System.out.println((0*8^2)+(1*8^1)+(1*8^0));
-        System.out.println(a);
+        String str = "abbdul kather";//scanner.nextLine();
 
         Character character = str.chars()
                 .mapToObj(ch -> (char) ch)

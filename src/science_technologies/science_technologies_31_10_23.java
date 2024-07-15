@@ -24,6 +24,7 @@ public class science_technologies_31_10_23 {
         System.out.println(grtThan5000Names);
 
         String maxSalEmp = list.stream()
+                .skip(1)
                 .max(Comparator.comparingDouble(Employee::getSalary))
                 .map(Employee::getName).get();
 

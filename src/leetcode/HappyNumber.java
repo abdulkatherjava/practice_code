@@ -5,10 +5,9 @@ import java.util.Set;
 
 public class HappyNumber {
     public static void main(String[] args) {
-        int num = 20;
+        int num = 19;
         Set<Integer> set = new HashSet<>();
-        while (num != 1 && !set.contains(num)) {
-
+        while (!(set.contains(num) || num == 1) ) {
             set.add(num);
             num = calculateSumOfSquares(num);
             System.out.println(num);
@@ -17,12 +16,10 @@ public class HappyNumber {
     }
 
     private static int calculateSumOfSquares(int num) {
-        int temp = 0, newNum = 0;
+        int newNum = 0;
         while (num > 0) {
-            temp = num % 10;
-            temp = temp * temp;
-            num = num / 10;
-            newNum += temp;
+            newNum += Math.pow(num % 10, 2);
+            num /= 10;
         }
         return newNum;
     }

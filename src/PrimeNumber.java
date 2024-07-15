@@ -8,6 +8,7 @@ public class PrimeNumber {
         System.out.println("Enter the number");
         Integer number = scanner.nextInt();
 
+        System.out.println(IntStream.rangeClosed(2, number/2).noneMatch(i -> number%i == 0));
         System.out.println(isPrime(number));
     }
 

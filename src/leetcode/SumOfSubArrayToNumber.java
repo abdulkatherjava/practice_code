@@ -18,7 +18,7 @@ import java.util.List;
 public class SumOfSubArrayToNumber {
     public static void main(String[] args) {
         int num = 6;
-        List<Integer> array = new LinkedList<>();
+        List<Integer> array = new ArrayList<>();
         ArrayList<List<Integer>> list = new ArrayList<>();
 
         for (int j = 1; j <= num; j++) {

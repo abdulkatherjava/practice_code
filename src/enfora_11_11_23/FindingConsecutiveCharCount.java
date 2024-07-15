@@ -9,7 +9,7 @@ package enfora_11_11_23;
 public class FindingConsecutiveCharCount {
 
     public static void main(String[] args) {
-        String str = "aabaabcab";
+        String str = "abaabcab";
         findIdenticalCharacters(str);
     }
 
